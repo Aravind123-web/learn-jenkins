@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'AGENT-1' # so je nkins will run on AGENT-1 node
+    }
     stages {
         stage('Build') {
             steps {
