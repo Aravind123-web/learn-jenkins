@@ -1,7 +1,8 @@
 pipeline {
-    agent {
-        label 'AGENT-1'
-    }
+    agent any
+    //agent {
+    //    label 'AGENT-1'
+    //}
     //options {
     //    timeout(time:3, unit: 'MINUTES')
     //   disableConcurrentBuilds()
@@ -13,11 +14,11 @@ pipeline {
     //    choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
     //    password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     //}
-    environment {
-        // key value pair
-        DEPLOY_TO = 'production'
-        GREETING = 'Good Morning'
-    }
+    //environment {
+    //    // key value pair
+    //    DEPLOY_TO = 'production'
+    //    GREETING = 'Good Morning'
+    //}
     stages {
         stage('Build') {
             steps {
