@@ -32,7 +32,7 @@ pipeline {
             }
         }
         // This stage is added to print the parameters passed to the pipeline
-        /*stage('print params') {
+        stage('print params') {
             steps {
                 echo "Hello ${params.PERSON}"
                 echo "Biography: ${params.BIOGRAPHY}"
@@ -40,6 +40,6 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
                 echo "Password: ${params.PASSWORD}"
             }
-        }*/
+        }
     }
 }
