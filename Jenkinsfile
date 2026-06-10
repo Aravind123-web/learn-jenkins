@@ -6,6 +6,7 @@ pipeline {
         timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
     }
+    // Define parameters for the pipeline
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -30,14 +31,15 @@ pipeline {
                 sh 'echo This is deploy stage'
             }
         }
-        stage('print params') {
-            steps {
-                echo "Hello ${params.PERSON}"
-                echo "Biography: ${params.BIOGRAPHY}"
-                echo "Toggle: ${params.TOGGLE}"
-                echo "Choice: ${params.CHOICE}"
-                echo "Password: ${params.PASSWORD}"
-            }
+        // This stage is added to print the parameters passed to the pipeline
+        // stage('print params') {
+        //     steps {
+        //         echo "Hello ${params.PERSON}"
+        //         echo "Biography: ${params.BIOGRAPHY}"
+        //         echo "Toggle: ${params.TOGGLE}"
+        //         echo "Choice: ${params.CHOICE}"
+        //         echo "Password: ${params.PASSWORD}"
+        //     }
         }
     }
 
