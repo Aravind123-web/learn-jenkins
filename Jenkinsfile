@@ -32,12 +32,12 @@ pipeline {
         stage('TEST') {
             steps {
                 sh 'echo This is test stage'
-                sh 'sleep 10'
             }
         }
         stage('DEPLOY') {
             steps {
                 sh 'echo This is deploy stage'
+                trdtuf
             }
         }
         // This stage is added to print the parameters passed to the pipeline
